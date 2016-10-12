@@ -10,13 +10,17 @@ import UIKit
 
 class CrayonViewController: UIViewController {
     
-    var color: String!
+    var detailCrayon: Crayon?
+    
     @IBOutlet weak var colorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.colorLabel.text = color
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if let color = detailCrayon {
+            view.backgroundColor = UIColor(red: CGFloat(color.red), green: CGFloat(color.green), blue: CGFloat(color.blue), alpha: 1.0)
+            colorLabel.text = color.name
+        }
     }
 
 

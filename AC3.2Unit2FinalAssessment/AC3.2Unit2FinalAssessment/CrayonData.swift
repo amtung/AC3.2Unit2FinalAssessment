@@ -8,18 +8,6 @@
 
 import Foundation
 
-//class Data {
-//    var colors: [Crayon]
-//    
-//    init(crayonsDict: [[String: String]]) {
-//        var crayonsArr = [Crayon]()
-//        for crayonDict in crayonsDict {
-//            guard let hex = crayonDict["hex"] as? String, let name = crayonDict["name"] as? String, let rgb = crayonDict["rgb"] as? String else { continue }
-//            let crayon = Crayon(hex: hex, name: name, rgb: rgb)
-//        }
-//    }
-//}
-
 let crayolaColors = [
     [
         "hex": "#EFDECD",

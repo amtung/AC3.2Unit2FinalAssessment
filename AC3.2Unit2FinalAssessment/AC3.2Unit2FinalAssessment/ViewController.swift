@@ -8,15 +8,18 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var sliderBar: UISlider!
+    @IBOutlet weak var stepper: UIStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        textField.delegate = self //delegate
+        
     }
 
 
@@ -24,20 +27,27 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         sender.maximumValue = 50
         sender.minimumValue = 0
         sender.isContinuous = true;
-        label.text = "Slider: \(Int(sender.value))"
+        stepper.value = Double(sender.value)
+        textField.text = String(sender.value)
+        label.text = String(sender.value)
     }
 
 
-    @IBAction func stepperTapped(_ sender: UIStepper) {
-        label.text = "Slider: \(Int(sender.value))"
-        self.sliderBar.value = Float(sender.value) //stackoverflow: this sets the slider to stick
+    @IBAction func stepperTapped(_ sender: UIStepper) { //target-action
+        sliderBar.value = Float(sender.value)
+        textField.text = String(sender.value)
+        label.text = String(sender.value)
     }
 
     
-    @IBAction func textFieldChanged(_ sender: UITextField) { //needs a textFiedDelegate class
-        label.text = self.textField.text
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text, let float = Float(text), let double = Double(text) { //delegate method
+            stepper.value = double
+            sliderBar.value = float
+            label.text = text
+        }
+        return true
     }
-
     /*
     // MARK: - Navigation
 

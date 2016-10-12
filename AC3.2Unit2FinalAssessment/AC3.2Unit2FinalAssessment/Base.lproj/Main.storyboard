@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="1092"/>
+            <point key="canvasLocation" x="636" y="1092"/>
         </scene>
         <!--ColorTableViewController-->
         <scene sceneID="qSU-tW-zWE">
@@ -45,7 +45,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0Ux-6i-mM8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="colorIdentifier" id="0Ux-6i-mM8">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Ux-6i-mM8" id="b1S-Iw-SG5">
@@ -66,12 +66,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Et-Du-ABw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="351"/>
+            <point key="canvasLocation" x="-220" y="1092"/>
         </scene>
-        <!--DetailViewController-->
+        <!--ViewController-->
         <scene sceneID="gdo-Ik-ks9">
             <objects>
-                <viewController title="DetailViewController" id="df0-ef-cRm" customClass="DetailViewController" customModule="AC3_2Unit2FinalAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ViewController" id="df0-ef-cRm" customClass="ViewController" customModule="AC3_2Unit2FinalAssessment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NRG-4f-0U2"/>
                         <viewControllerLayoutGuide type="bottom" id="nVb-of-cyQ"/>
@@ -118,12 +118,13 @@
                     <connections>
                         <outlet property="label" destination="cBJ-Jq-NOj" id="Bog-yB-Jub"/>
                         <outlet property="sliderBar" destination="ZNO-C5-oZm" id="USF-ad-qFs"/>
+                        <outlet property="stepper" destination="LxU-Eq-t1f" id="KXf-KO-OCz"/>
                         <outlet property="textField" destination="VrR-mx-1Hr" id="St6-KI-Uk1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScI-Oa-SE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1327.2" y="1120.3898050974515"/>
+            <point key="canvasLocation" x="-1788" y="1104"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HqY-fI-Fq2">
@@ -160,7 +161,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-494" y="351"/>
+            <point key="canvasLocation" x="-934" y="1092"/>
         </scene>
     </scenes>
 </document>

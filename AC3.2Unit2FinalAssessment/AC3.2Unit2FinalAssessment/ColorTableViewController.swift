@@ -10,17 +10,15 @@ import UIKit
 
 class ColorTableViewController: UITableViewController {
     
-    internal var crayonData: [Crayon]?
+    var crayons = [Crayon]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var crayons: [Crayon] = []
         for c in crayolaColors {
             if let crayon = Crayon(fromDict: c) {
                 crayons.append(crayon)
             }
-            crayonData = crayons
     }
 }
 
@@ -32,22 +30,31 @@ class ColorTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return crayolaColors.count
+        return crayons.count
     }
     
-//    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        guard let colors = crayolaColors.colors else { return }
-//        performSegue(performSegue(withIdentifier: "CrayonNameSegue", sender: <#T##Any?#>)
-//    }
-//    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "colorIdentifier", for: indexPath)
+        //iterate through the array, set cells textlabel.text = crayons name (use that indexPath.row...) Set the cells background color equal to a UIColor with the red, green and blue properties of the crayon
+        let crayon = self.crayons[indexPath.row]
+        cell.backgroundColor = UIColor(red: CGFloat(crayon.red), green: CGFloat(crayon.green), blue: CGFloat(crayon.blue), alpha: 1.0)
+        cell.textLabel?.text = crayon.name
+    
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCrayon = self.crayons[indexPath.row]
+        performSegue(withIdentifier: "CrayonNameSegue", sender: selectedCrayon)
+    }
     
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let colorViewController = segue.destination as? CrayonViewController { //will transition to the other segue view controller
-            if segue.identifier == "CrayonNameSegue" {
-                let indexPath = tableView.indexPathForSelectedRow
-                colorViewController.color = String(describing: crayonData)
+        if segue.identifier == "CrayonNameSegue" {
+            if let colorViewController = segue.destination as? CrayonViewController {
+                colorViewController.detailCrayon = sender as? Crayon
+
             }
         }
     }

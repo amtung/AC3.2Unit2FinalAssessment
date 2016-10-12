@@ -15,7 +15,7 @@
 		9CEC87DE1DA69FA700FF4BA1 /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC87DD1DA69FA700FF4BA1 /* ColorTableViewController.swift */; };
 		9CEC87E01DA69FCB00FF4BA1 /* CrayonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC87DF1DA69FCB00FF4BA1 /* CrayonData.swift */; };
 		9CEC87E21DA69FE100FF4BA1 /* Crayon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC87E11DA69FE100FF4BA1 /* Crayon.swift */; };
-		9CEC87E41DA6A8EF00FF4BA1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC87E31DA6A8EF00FF4BA1 /* DetailViewController.swift */; };
+		9CEC87E41DA6A8EF00FF4BA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC87E31DA6A8EF00FF4BA1 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		9CEC87DD1DA69FA700FF4BA1 /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
 		9CEC87DF1DA69FCB00FF4BA1 /* CrayonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrayonData.swift; sourceTree = "<group>"; };
 		9CEC87E11DA69FE100FF4BA1 /* Crayon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crayon.swift; sourceTree = "<group>"; };
-		9CEC87E31DA6A8EF00FF4BA1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9CEC87E31DA6A8EF00FF4BA1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				9CEC87CB1DA69A5500FF4BA1 /* AppDelegate.swift */,
 				9CEC87CD1DA69A5500FF4BA1 /* CrayonViewController.swift */,
 				9CEC87DD1DA69FA700FF4BA1 /* ColorTableViewController.swift */,
-				9CEC87E31DA6A8EF00FF4BA1 /* DetailViewController.swift */,
+				9CEC87E31DA6A8EF00FF4BA1 /* ViewController.swift */,
 				9CEC87DF1DA69FCB00FF4BA1 /* CrayonData.swift */,
 				9CEC87E11DA69FE100FF4BA1 /* Crayon.swift */,
 				9CEC87CF1DA69A5500FF4BA1 /* Main.storyboard */,
@@ -152,7 +152,7 @@
 				9CEC87CE1DA69A5500FF4BA1 /* CrayonViewController.swift in Sources */,
 				9CEC87E21DA69FE100FF4BA1 /* Crayon.swift in Sources */,
 				9CEC87E01DA69FCB00FF4BA1 /* CrayonData.swift in Sources */,
-				9CEC87E41DA6A8EF00FF4BA1 /* DetailViewController.swift in Sources */,
+				9CEC87E41DA6A8EF00FF4BA1 /* ViewController.swift in Sources */,
 				9CEC87DE1DA69FA700FF4BA1 /* ColorTableViewController.swift in Sources */,
 				9CEC87CC1DA69A5500FF4BA1 /* AppDelegate.swift in Sources */,
 			);
